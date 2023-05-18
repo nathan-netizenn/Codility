@@ -5,6 +5,12 @@
 
 def sum_hash_values(hash)
     # Your code here
+
+    sum = 0
+    hash.each do |c,d|
+        sum+= d
+    end
+    sum
 end
   
 # Example usage
