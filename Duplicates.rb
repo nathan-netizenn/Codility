@@ -5,6 +5,7 @@
 
 def find_duplicates(arr)
     # Your code here
+    arr.uniq
 end
   
 # Example usage
