@@ -1,17 +1,17 @@
-=begin
-    Write a function select_keys that takes a hash and an array 
-    of keys as input, and returns a new hash containing only the 
-    key-value pairs with keys present in the given array.
-
-=end
-
 def select_keys(hash, keys)
-    # Your code here
-end
-
-# Example usage
-input = { a: 1, b: 2, c: 3, d: 4 }
-selected_keys = [:b, :c, :e]
-output = select_keys(input, selected_keys)
-puts output.inspect # Expected output: { b: 2, c: 3 }
+    selected_hash = {}
   
+    keys.each do |key|
+      if hash.key?(key)
+        selected_hash[key] = hash[key]
+      end
+    end
+  
+    selected_hash
+  end
+  
+  # Example usage
+  hash = { a: 1, b: 2, c: 3, d: 4 }
+  keys = [:b, :c]
+  selected_hash = select_keys(hash, keys)
+  puts selected_hash.inspect
